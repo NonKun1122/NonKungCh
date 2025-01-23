@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #69A1FF;
     color: #fff;
     text-align: center;
     padding: 0 0;
@@ -45,9 +45,10 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/*--------------------------*/
 .update {
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 7px;
     max-width: 600px;
     background-color: #2b2b2b;
     border-radius: 10px;
@@ -58,7 +59,7 @@ nav ul li a:hover {
 
 .update img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -70,16 +71,20 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
+/*--------------------------*/
+
 main {
-    padding: 2em;
+    padding: 1px;
 }
 
 main section {
-    margin-bottom: 1em;
-    padding: 5px;
-    border-radius: 12px;
+    margin-bottom: 1px;
+    padding: 2px;
+    border-radius: 20px;
 }
 
+/*--------------------------*/
+/* แท็บกัน */
 #home {
     background-color: #333;
 }
@@ -99,6 +104,7 @@ main section {
     margin-top: 0;
     color: #fff;
 }
+/*--------------------------*/
 
 .updates-container {
     display: flex;
@@ -142,6 +148,8 @@ footer {
     }
 }
 
+/*--------------------------*/
+/* ปุ่มดู view*/
 .view-button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -154,13 +162,14 @@ footer {
 }
 
 .view-button:hover {
-    background-color: #0056b3;
+    background-color: #00C9FF;
 }
 
 .view-button:active {
-    background-color: #00387C;
+    background-color: #0023FF;
 }
 
+/*--------------------------*/
 /* สไตล์สำหรับ Sidebar */
 .sidebar {
     height: 100%;
@@ -209,8 +218,9 @@ footer {
     background-color: #444;
 }
 
+/*--------------------------*/
 /* การปรับเนื้อหาเมื่อ Sidebar เปิด */
 #main {
     transition: margin-left .5s;
-    padding: 16px;
+    padding: 20px;
 }
