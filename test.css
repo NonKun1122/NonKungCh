@@ -1,0 +1,14 @@
+boby {
+    color: red;
+    background-color: rgb(154, 154, 198);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
