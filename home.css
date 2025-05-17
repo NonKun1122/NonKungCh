@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #111;
+  font-family: 'Kanit', sans-serif;
+  color: #aaffcc;
+  min-height: 100vh;
+  padding-bottom: 160px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 10px 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+}
+
+header h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px #000;
+}
+
+.info-text {
+  position: absolute;
+  left: 20px;
+  top: 70px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.content-box {
+  width: 90%;
+  max-width: 500px;
+  height: 150px;
+  background-color: #555;
+  border-radius: 10px;
+}
+
+/* ปุ่ม toggle */
+.toggle-menu {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3a963a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* พื้นหลังโค้งของเมนู */
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 20px 10px 30px;
+  width: 100%;
+  max-width: 500px;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+  transition: 0.3s ease;
+  padding-top: 50px; /* เพิ่มพื้นที่เผื่อให้ปุ่มอยู่ด้านบน */
+  height: 140px;
+  display: none;
+  z-index: 999;
+}
+
+/* กล่องปุ่มให้ลอยขึ้น */
+.menu-buttons {
+  position: absolute;
+  top: 50px; /* ให้ลอยขึ้นครึ่งปุ่ม */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ปุ่มเมนู */
+.menu-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #3a963a;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.menu-circle:hover {
+  background-color: #2b7c2b;
+}
+
+
+.bottom-menu.open {
+  display: flex;
+}
+
+.menu-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #3a963a;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .content-box {
+    height: 120px;
+  }
+
+  .toggle-menu {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    line-height: 50px;
+  }
+
+  .menu-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .bottom-menu {
+    padding: 15px 10px 25px;
+  }
+}

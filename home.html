@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header>
+    <h1>Home</h1>
+    <span class="info-text">ข้อมูล</span>
+  </header>
+
+  <main>
+    <div class="content-box"></div>
+    <div class="content-box"></div>
+  </main>
+
+  <!-- ปุ่มเปิดปิดเมนู -->
+  <div class="toggle-menu" onclick="toggleMenu()">≡</div>
+
+  <!-- เมนูโค้ง -->
+  <nav class="bottom-menu" id="bottomMenu">
+    <div class="menu-circle">🏠</div>
+    <div class="menu-circle">📞</div>
+    <div class="menu-circle">📱</div>
+    <div class="menu-circle">🧩</div>
+    <div class="menu-circle">R</div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("bottomMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
