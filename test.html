@@ -74,9 +74,9 @@
 <script>
   let products = [
     { id: 1, name: "Watering Can", qty: 0, img: "k/1.png", price: 1 },
-    { id: 2, name: "Basic Sprinkler", qty: 0, img: "k/2.png", price: 2 },
-    { id: 3, name: "Advanced Sprinkler", qty: 0, img: "k/3.png", price: 5 },
-    { id: 4, name: "Godly Sprinkler", qty: 0, img: "k/4.png", price: 7 },
+    { id: 2, name: "Basic Sprinkler", qty: 0, img: "k/2.png", price: 1 },
+    { id: 3, name: "Advanced Sprinkler", qty: 0, img: "k/3.png", price: 2 },
+    { id: 4, name: "Godly Sprinkler", qty: 0, img: "k/4.png", price: 4 },
   ];
 
   let cart = [];
@@ -206,11 +206,17 @@
     updateBtnCount(id);
     showCart();
   }
+  
+function captureCart() {
+  const cartEl = document.getElementById("cartModal");
 
-  function captureCart() {
-    const cartEl = document.getElementById("cartModal");
+  html2canvas(cartEl).then(canvas => {
+    const link = document.createElement("a");
+    link.download = "cart_screenshot.png";
+    link.href = canvas.toDataURL();
+    link.click();
 
-    // ลดสินค้า
+    // ลด stock และล้างตะกร้า หลังแคปเสร็จ
     cart.forEach(c => {
       const product = products.find(p => p.id === c.id);
       if (product) product.qty -= c.qty;
@@ -218,14 +224,10 @@
     cart = [];
     showProducts();
     showCart();
+  });
+}
 
-    html2canvas(cartEl).then(canvas => {
-      const link = document.createElement("a");
-      link.download = "cart_screenshot.png";
-      link.href = canvas.toDataURL();
-      link.click();
-    });
-  }
+  
 
   function showAdminProducts() {
     const adminProducts = document.getElementById("adminProducts");
